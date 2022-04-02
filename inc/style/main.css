@@ -47,6 +47,7 @@
     margin-bottom:1em;
     background-color: #4f4e4e;
     border: 1px solid #ddd;
+    text-align: left;
 }
 #enlist>.blockMon>pre{
     font-family: "Roboto";
