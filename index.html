@@ -20,14 +20,21 @@
         <link rel="stylesheet" href="inc/style/main.css">
 		<script src="inc/js/JQuery.js"></script>
     </head>
-    <body class="fixed">
+    <body> <!--class="fixed"-->
     <!-- Прелоадер -->
 
-    <div class="preloader">
+    <!-- <div class="preloader">
         <svg viewBox="0 0 75 75">
             <circle cx="37.5" cy="37.5" r="25" fill="transparent" stroke="#000" stroke-width="2"></circle>
         </svg>
-    </div>
+    </div> -->
+<!--    <div class="preloader">-->
+<!--        <div class="preloader-1">-->
+<!--            <h1>Loading...</h1>-->
+<!--            <progress value="0" max="100" id="progressbar"></progress>-->
+<!--            <span class="progress-value">0%</span>-->
+<!--        </div>-->
+<!--    </div>-->
         
     <div class="wrapper">
         <div class="content">
@@ -231,34 +238,55 @@ c0 -83 19 -113 92 -146 40 -18 79 -27 141 -31 73 -4 89 -9 107 -28 l21 -23 57
             </div>
             <div class="article">
                 <div id="list">
-                    <div id="enlist">
-                        <h2 class="NameQuest">Добро пожаловать!</h2>
-                        <p class="TextQuest">Здесь представлены языки программирования,которые вы можете изучить на этом сайте.</p>
-                        <div class="blockMon hidden"><pre class="CodeQuest"></pre></div>
-                    </div>
-                    <div class="navMon">
-                        <div id="monitor">
-                            <div class="block monBlock"><span>PHP</span></div>
-                            <div class="block monBlock"><span>Java</span></div>
-                            <div class="block monBlock"><span>TypeScript</span></div>
-                            <div class="block monBlock"><span>JavaScript</span></div>
-                            <div class="block monBlock"><span>C++</span></div>
-                            <div class="block monBlock"><span>C#</span></div>
-                            <div class="block monBlock"><span>F#</span></div>
-                            <div class="block monBlock"><span>Go</span></div>
-                            <div class="block monBlock"><span>Lua</span></div>
-                            <div class="block monBlock"><span>Kotlin</span></div>
-                            <div class="block monBlock"><span>Rust</span></div>
-                            <div class="block monBlock"><span>Scala</span></div>
-                            <div class="block monBlock"><span>Swift</span></div>
-                            <div class="block monBlock"><span>Shell</span></div>
-                            <div class="block monBlock"><span>SQL</span></div>
-                            <div class="block monBlock"><span>Python</span></div>
+                    <main id="mList">
+                        <div id="enlist">
+                            <h2 class="NameQuest">Добро пожаловать!</h2>
+                            <p class="TextQuest">Здесь представлены языки программирования,которые вы можете изучить на этом сайте.</p>
+                            <div class="blockMon hidden"><pre class="CodeQuest"></pre></div>
                         </div>
-                        <div class="menu2">
-                            <div class="menuToggle2"></div>
+                        <div class="navMon">
+                            <div id="monitor">
+                                <div class="block monBlock"><span>PHP</span></div>
+                                <div class="block monBlock"><span>Java</span></div>
+                                <div class="block monBlock"><span>TypeScript</span></div>
+                                <div class="block monBlock"><span>JavaScript</span></div>
+                                <div class="block monBlock"><span>C++</span></div>
+                                <div class="block monBlock"><span>C#</span></div>
+                                <div class="block monBlock"><span>F#</span></div>
+                                <div class="block monBlock"><span>Go</span></div>
+                                <div class="block monBlock"><span>Lua</span></div>
+                                <div class="block monBlock"><span>Kotlin</span></div>
+                                <div class="block monBlock"><span>Rust</span></div>
+                                <div class="block monBlock"><span>Scala</span></div>
+                                <div class="block monBlock"><span>Swift</span></div>
+                                <div class="block monBlock"><span>Shell</span></div>
+                                <div class="block monBlock"><span>SQL</span></div>
+                                <div class="block monBlock"><span>Python</span></div>
+                            </div>
+                            <form method="get">
+                                <textarea class="CodeBlock hidden"></textarea>
+                                <input class="SubCode hidden" type="submit" value="Проверить">
+                            </form>
                         </div>
-                    </div>
+                    </main>
+                    <select id="sel">
+                        <option class="block monBlock">PHP</option>
+                        <option class="block monBlock">Java</option>
+                        <option class="block monBlock">TypeScript</option>
+                        <option class="block monBlock">JavaScript</option>
+                        <option class="block monBlock">C++</option>
+                        <option class="block monBlock">C#</option>
+                        <option class="block monBlock">F#</option>
+                        <option class="block monBlock">Go</option>
+                        <option class="block monBlock">Lua</option>
+                        <option class="block monBlock">Kotlin</option>
+                        <option class="block monBlock">Rust</option>
+                        <option class="block monBlock">Scala</option>
+                        <option class="block monBlock">Swift</option>
+                        <option class="block monBlock">Shell</option>
+                        <option class="block monBlock">SQL</option>
+                        <option class="block monBlock">Python</option>
+                    </select>
                 </div>
                 <div class="blockArt">
                     <div class="block first">
@@ -329,6 +357,7 @@ c0 -83 19 -113 92 -146 40 -18 79 -27 141 -31 73 -4 89 -9 107 -28 l21 -23 57
         });
 	</script>
     <script src="inc/js/preloader.js"></script>
-    <script src="inc/js/main.js" type="module"></script>
+    <script src="inc/js/questLang.js"></script>
+    <script src="inc/js/main.js"></script>
     </body>
 </html>
