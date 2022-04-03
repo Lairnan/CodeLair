@@ -63,7 +63,7 @@ let arr = [
     //     code: '',
     // },
 ];
-/*export*/ function questLang(types){
+export function questLang(types){
 
     let arr2 = [];
     for(let i = 0; i<arr.length;i++) {

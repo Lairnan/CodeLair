@@ -1,4 +1,4 @@
-// import {questLang} from "./questLang.js";
+import {questLang} from "./questLang.js";
 
 const blockBtn = document.querySelectorAll(".monBlock");
 const block = document.querySelectorAll(".block");
