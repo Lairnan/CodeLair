@@ -44,10 +44,34 @@ html,body{
 .head{
     position: sticky;
     top: 0;
+    display:grid;
+    grid-template-rows: auto 0;
     background-color: rgba(255,255,255,0.75);
     z-index: 3;
+    animation: hide 0.5s;
+}
+.head.open{
+    grid-template-rows: auto 7em;
+    animation: show 0.5s;
+}
+@keyframes hide {
+    from{
+        grid-template-rows: auto 7em;
+    }
+    to{
+        grid-template-rows: auto 0;
+    }
+}
+@keyframes show {
+    from{
+        grid-template-rows: auto 0;
+    }
+    to{
+        grid-template-rows: auto 7em;
+    }
 }
 .header{
+    position:relative;
     display:grid;
 	grid-template-columns:auto auto;
 	justify-content:space-between;
@@ -84,16 +108,16 @@ html,body{
     transition:0.5s;
 }
 .nav{
+    position:relative;
     flex-direction: column;
     transition: 0.5s;
     transform: translateY(-15em);
-    margin-bottom: -7em;
-    z-index: 1;
+    z-index: -2;
 }
 .nav.open{
     display: flex;
-    margin-bottom: 0;
     transform: translateY(0);
+    z-index: 1;
 }
 .nav>li{
     display:none;
