@@ -20,14 +20,14 @@
         <link rel="stylesheet" href="inc/style/main.css">
 		<script src="inc/js/JQuery.js"></script>
     </head>
-    <body class="fixed">
-    <!-- Прелоадер -->
+    <body >
+    <!-- Прелоадер class="fixed"-->
 
-    <div class="preloader">
+   <!--  <div class="preloader">
         <svg viewBox="0 0 75 75">
             <circle cx="37.5" cy="37.5" r="25" fill="transparent" stroke="#000" stroke-width="2"></circle>
         </svg>
-    </div>
+    </div> -->
 
     <div class="wrapper">
         <div class="content">
@@ -326,10 +326,9 @@
         </svg>
     </a>
 	<script>
-        $('.nav').slideToggle();
         $(".menuToggle").click(function (){
             $(".menu").toggleClass('open');
-            $('.nav').slideToggle();
+            $(".nav").toggleClass('open');
         });
         $(window).on("scroll", function() {
             if ($(window).scrollTop() > 25) {
@@ -352,6 +351,7 @@
         });
 	</script>
     <script src="inc/js/preloader.js"></script>
-    <script src="inc/js/main.js" type="module"></script>
+    <script src="inc/js/questLang.js"></script>
+    <script src="inc/js/main.js"></script>
     </body>
 </html>

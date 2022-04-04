@@ -45,7 +45,7 @@ html,body{
     position: sticky;
     top: 0;
     background-color: rgba(255,255,255,0.75);
-    z-index: 1;
+    z-index: 3;
 }
 .header{
     display:grid;
@@ -53,6 +53,7 @@ html,body{
 	justify-content:space-between;
     align-content:center;
     align-items: center;
+    z-index: 2;
 	
 }
 .header a{
@@ -84,6 +85,15 @@ html,body{
 }
 .nav{
     flex-direction: column;
+    transition: 0.5s;
+    transform: translateY(-15em);
+    margin-bottom: -7em;
+    z-index: 1;
+}
+.nav.open{
+    display: flex;
+    margin-bottom: 0;
+    transform: translateY(0);
 }
 .nav>li{
     display:none;
