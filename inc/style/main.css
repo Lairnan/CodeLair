@@ -88,11 +88,27 @@
     background-color: #a89b9b;
     cursor: pointer;
 }
-#sel{
+#nextBut{
     display:none;
     position:relative;
     margin:10px 50%;
+    flex-direction: row;
 }
+#nextBut>#sel{margin-right:2em;}
+#nextBut>input[type="submit"]{
+    width:7.5em;
+    background-color:transparent;
+    color:#fff;
+    border-radius: 50px;
+    font-size:1.2em;
+}
+#nextBut>input[type="submit"]:hover{
+    cursor: pointer;
+    background: linear-gradient(270deg, #ff9898, #ff9400, #ffcd00);
+    background-size: 600% 600%;
+    animation:background 3s ease infinite;
+}
+#NextBtn{display:none;}
 .navMon>form{
     display:grid;
     grid-template-rows: auto auto;
@@ -108,6 +124,8 @@
     font-family: "Roboto";
     font-size:calc(0.5vw + 0.7em);
     color: #ffffff;
+    resize:none;
+    overflow: auto;
 }
 .navMon>form>.SubCode{
     width:7.5em;
@@ -188,8 +206,8 @@
     #monitor{
         display:none;
     }
-    #sel{
-        display:block;
+    #nextBut{
+        display:flex;
     }
     #enlist{
         width:55vw;
