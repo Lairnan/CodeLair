@@ -1,0 +1,99 @@
+@import url("../../fonts/HelveticaNeue/style.css");
+@import url("../../fonts/Pacifico/style.css");
+@import url("../../fonts/BebasNeue/style.css");
+@import url("../../fonts/League Gothic/style.css");
+@import url("../../fonts/Roboto/style.css");
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	min-height: 100vh;
+	min-width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #ccc;
+}
+.content {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	background-color: #fff;
+	color:#000;
+}
+a{
+	text-decoration:none;
+	color:#000;
+	/*transition:0.3s;*/
+}
+a:hover{color:#ccc;}
+.formBox {
+	margin-top:3vh;
+	padding: 3vh 2vw;
+	font-size: 1.5em;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.formBox p {
+	font-family: "Roboto", sans-serif;
+}
+.formBox_inp input {
+	font-family: "League Gothic", sans-serif;
+	font-size: 1.5em;
+	padding: 0.1em 1em;
+	border:none;
+	background-color:transparent;
+	border-bottom: 2px solid #D1D1D4;
+	transition:0.5s;
+	outline:none;
+}
+.formBox_inp input:hover,
+.formBox_inp input:active,
+.formBox_inp input:focus{
+	border-bottom: 2px solid #6A679E;
+}
+.formBox_inp{
+	display: grid;
+	grid-template-columns:auto auto;
+	grid-gap: 10px;
+	align-items: center;
+	justify-content: center;
+}
+.icon {
+	position: absolute;
+	width: 5vw;
+	height: auto;
+	top: -7.5vh;
+	top: -5vh;
+	justify-content: center;
+}
+.inp{
+	position:relative;
+	padding: 3vh 3vw;
+}
+.inp>img{
+	position: absolute;
+	width: 1.5em;
+	height: 1.5em;
+	top: 4vh;
+}
+input[type="submit"]{
+	margin:1vh 0;
+	padding:2vh 3vw;
+	font-size:2em;
+	font-family: "League Gothic", sans-serif;
+	border-radius: 50px;
+	border:2px solid black;
+	background-color:transparent;
+	transition:.5s;
+}
+input[type="submit"]:hover{
+	background-color: #416de0;
+	color:#fff;
+	cursor:pointer;
+}
