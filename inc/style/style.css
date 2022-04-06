@@ -94,7 +94,7 @@ html,body{
 }
 .navigation{
     position:relative;
-    margin:auto 2.5em;
+    margin:auto;
 }
 .header .auth{
     font-family:'Pacifico';
@@ -265,5 +265,5 @@ html,body{
     .footer>.block.block_fot_left{}
 }
 @media screen and (max-width:21.875em){
-    .header svg{height:3.75em;}
+    .header svg{height:3.25em;}
 }
