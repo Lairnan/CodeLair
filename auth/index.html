@@ -25,50 +25,10 @@
 					</div>
 				</div>
 				<input type="submit" value="Войти" id="auth">
-				<p><span id="test2">Если вы ещё не зарегистрированы, то </span><a href="#auth" id="test">зарегистрируйтесь</a>!</p>
+				<p><span id="test2">Если вы ещё не зарегистрированы, то </span><a href="#reg" id="test">зарегистрируйтесь</a>!</p>
 			</form>
 		</div>
 	</div>
-	<script>
-		const eye = document.querySelector(".eye");
-		const pass = document.querySelector("#password");
-		const test = document.querySelector("#test");
-		const test2 = document.querySelector("#test2");
-		const sub = document.querySelector("#auth");
-
-		function auth(){
-			sub.value = "Зарегистрироваться";
-			test2.textContent = 'Уже есть аккаунт? ';
-			test.textContent = 'авторизуйтесь';
-		}
-
-		function reg(){
-			sub.value = "Войти";
-			test2.textContent = 'Если вы ещё не зарегистрированы, то ';
-			test.textContent = 'зарегистрируйтесь';
-		}
-
-		eye.addEventListener("click", () => {
-			eye.classList.toggle('cross');
-			pass.type = pass.type === 'password' ? 'text' : 'password';
-		});
-		test.addEventListener("click",()=>{
-			if(test.attributes[0].textContent === '#auth'){
-				test.attributes[0].textContent = '#reg';
-				reg();
-			} else {
-				test.attributes[0].textContent = '#auth';
-				auth();
-			}
-		});
-
-		document.addEventListener("DOMContentLoaded",()=>{
-			if (document.location.hash === "#reg") {
-				auth();
-			} else {
-				reg();
-			}
-		});
-	</script>
+	<script src="src/main.js"></script>
 </body>
 </html>
