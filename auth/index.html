@@ -12,21 +12,63 @@
 			<img src="src/img/icon_user.svg" class="icon">
 			<form method="post" class="formBox">
 				<div class="formBox_inp">
-					<p>Email:</p>
 					<div class="inp">
 						<img src="src/img/icon_login.svg">
-						<input type="email" placeholder="example@mail.ru" name="email">
+						<input type="mail" name="email" id="email" required="">
+						<label for="email">email</label>
 					</div>
-					<p>Password:</p>
 					<div class="inp">
 						<img src="src/img/icon_lock.svg">
-						<input type="password" placeholder="password" name="password">
+						<input type="password" name="password" id="password" required="" value="test">
+						<label for="password">password</label>
+						<img src="src/img/icon_eye.svg" class="eye"/>
 					</div>
 				</div>
-				<input type="submit" value="Войти">
-				<p>Если вы ещё не зарегистрированы, то <a href="#reg">зарегистрируйтесь</a>!</p>
+				<input type="submit" value="Войти" id="auth">
+				<p><span id="test2">Если вы ещё не зарегистрированы, то </span><a href="#auth" id="test">зарегистрируйтесь</a>!</p>
 			</form>
 		</div>
 	</div>
+	<script>
+		const eye = document.querySelector(".eye");
+		const pass = document.querySelector("#password");
+		const test = document.querySelector("#test");
+		const test2 = document.querySelector("#test2");
+		const sub = document.querySelector("#auth");
+
+		function auth(){
+			sub.value = "Зарегистрироваться";
+			test2.textContent = 'Уже есть аккаунт? ';
+			test.textContent = 'авторизуйтесь';
+		}
+
+		function reg(){
+			sub.value = "Войти";
+			test2.textContent = 'Если вы ещё не зарегистрированы, то ';
+			test.textContent = 'зарегистрируйтесь';
+		}
+
+		eye.addEventListener("click", () => {
+			eye.classList.toggle('cross');
+			pass.type = pass.type === 'password' ? 'text' : 'password';
+		});
+		test.addEventListener("click",()=>{
+			if(test.attributes[0].textContent === '#auth'){
+				test.attributes[0].textContent = '#reg';
+				reg();
+			} else {
+				test.attributes[0].textContent = '#auth';
+				auth();
+			}
+		});
+
+		document.addEventListener("DOMContentLoaded",()=>{
+			if (document.location.hash === "#reg") {
+				auth();
+			} else {
+				reg();
+			}
+		});
+	</script>
 </body>
 </html>

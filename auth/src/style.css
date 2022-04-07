@@ -32,7 +32,7 @@ a{
 a:hover{color:#ccc;}
 .formBox {
 	margin-top:3vh;
-	padding: 3vh 2vw;
+	padding: 2em 1em;
 	font-size: 1.5em;
 	display:flex;
 	flex-direction: column;
@@ -59,22 +59,57 @@ a:hover{color:#ccc;}
 }
 .formBox_inp{
 	display: grid;
-	grid-template-columns:auto auto;
+	grid-template-columns: 1fr;
+	grid-template-rows:auto auto;
 	grid-gap: 10px;
 	align-items: center;
 	justify-content: center;
+	place-items: center;
+	width:100%;
 }
 .icon {
 	position: absolute;
-	width: 5vw;
+	width: 6em;
 	height: auto;
-	top: -7.5vh;
-	top: -5vh;
+	top: -3em;
 	justify-content: center;
 }
 .inp{
 	position:relative;
-	padding: 3vh 3vw;
+	padding: 1em 0.5em;
+	margin-bottom:2em;
+}
+.inp>label{
+	color:gray;
+	position:absolute;
+	transition: all 0.3s ease-in-out;
+}
+.inp input:empty ~ label{
+	left:2.5em;
+	top:1.75em;
+	cursor:text;
+}
+.inp>input{
+	width:80%;
+}
+.inp input:focus ~ label,
+.inp input:valid ~ label{
+	top:0;
+	left:1.75em;
+	font-size:0.75em;
+	cursor:default;
+}
+.eye{
+	content:'';
+	position:absolute;
+	right:0;
+	top:2.5em;
+	width:1.5em;
+	background:url("img/icon_eye.svg");
+	cursor:pointer;
+}
+.cross{
+	background:url("img/icon_eye_cross.svg");
 }
 .inp>img{
 	position: absolute;
