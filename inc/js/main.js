@@ -25,7 +25,7 @@ const deactivation = () => {
 	nextBut.style.display = 'flex';
 	nextBtn.style.display = 'block';
 	codeQuest.textContent = '';
-	codeBlock.textContent = '';
+	codeBlock.value = '';
 }
 
 blockBtn.forEach((btn,i)=>btn.addEventListener('click', () => {
@@ -43,7 +43,10 @@ blockBtn.forEach((btn,i)=>btn.addEventListener('click', () => {
 
 subCode.addEventListener('click', (e) => {
 	e.preventDefault();
-	codeBlock.textContent = "Проверяй сам себя!";
+	codeBlock.value = "Проверяй сам себя!";
+	// let quest = questLang("PHP");
+	// console.log(codeBlock.value);
+	// console.log(quest[1]);
 });
 
 function select() {
