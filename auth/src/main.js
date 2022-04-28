@@ -46,11 +46,11 @@ var pas;
 
 test.addEventListener("click",()=>{
     if(document.location.hash === "#reg"){
-        test.attributes[0].textContent = '#auth';
+        test.attributes['href'].textContent = '#auth';
         auth();
         main_auth();
     } else {
-        test.attributes[0].textContent = '#reg';
+        test.attributes['href'].textContent = '#reg';
         reg();
         main_reg();
     }
@@ -58,9 +58,11 @@ test.addEventListener("click",()=>{
 
 document.addEventListener("DOMContentLoaded",()=>{
     if (document.location.hash === "#reg") {
+        test.attributes['href'].textContent = '#reg';
         reg();
         main_reg();
     } else {
+        test.attributes['href'].textContent = '#auth';
         auth();
         main_auth();
     }

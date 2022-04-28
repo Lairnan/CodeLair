@@ -133,8 +133,8 @@ a:hover{color:#fff;}
 	cursor:text;
 }
 .inp>input{
-	width:80%;
 	color:#fff;
+	width:100%;
 }
 .inp input:focus ~ label,
 .inp input:valid ~ label{
@@ -145,10 +145,7 @@ a:hover{color:#fff;}
 }
 .eye{
 	content:'';
-	position:absolute;
-	right:0;
-	top:2.5em;
-	width:1.5em;
+	right:0.25em;
 	background:url("img/icon_eye.svg");
 	cursor:pointer;
 }
