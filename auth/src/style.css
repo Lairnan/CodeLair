@@ -27,7 +27,7 @@
 }
 a{
 	text-decoration:none;
-	color:#ddd;
+	color: #ffcccc;
 	transition:0.3s;
 }
 a:hover{color:#fff;}
@@ -36,7 +36,7 @@ a:hover{color:#fff;}
 	padding: 2em 1em;
 	font-size: 1.5em;
 	display:flex;
-	max-width:25em;
+	min-width:25em;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -160,8 +160,8 @@ a:hover{color:#fff;}
 }
 input[type="submit"]{
 	margin:1vh 0;
-	padding:2vh 3vw;
-	font-size:2em;
+	padding:2vh 2vw;
+	font-size:1.25em;
 	font-family: "League Gothic", sans-serif;
 	border-radius: 50px;
 	border:2px solid black;
@@ -185,6 +185,13 @@ input[type="submit"]:hover{
 .generator:hover{
 	color: #dc5;
 	cursor: pointer;
+}
+
+@media screen and (max-width: 50em){
+	.formBox{
+		max-width:25em;
+		min-width:5em;
+	}
 }
 
 @media screen and (max-width: 31.25em){
