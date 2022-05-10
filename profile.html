@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inc/style/profile.css">
+    <title>Profile</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="header">
+                <a class="header__logo" href="profile.html">
+                    <img src="inc/img/logo.svg"/>
+                    <h2>CodeLair</h2>
+                </a>
+                <div></div>
+                <div class="header__menu">
+                    <p>Онлайн редактор</p>
+                    <p>Что-то ещё</p>
+                </div>
+            </div>
+            <div class="article">
+                <div class="prof">
+                    <h2 class="profile__name">Настройки</h2>
+                    <div class="profile">
+                        <div class="profile__left__bar">
+                            <p>Какой-то пункт</p>
+                            <p>Какой-то пункт</p>
+                            <p>Какой-то пункт</p>
+                        </div>
+                        <div class="profile__right__bar">
+                            <form method="POST">
+                                <div class="profile__block">
+                                    <input type="text" id="login" name="login" required="">
+                                    <label for="login">Логин</label>
+                                </div>
+                                <div class="profile__block">
+                                    <input type="mail" id="email" name="email" required="">
+                                    <label for="email">Email</label>
+                                </div>
+                                <div class="profile__block">
+                                    <input type="submit" id="submit" name="submit" value="Сохранить"/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+        <script>
+            const submit = document.querySelector('input[type="submit"]');
+            submit.addEventListener("click",(e)=>{
+                e.preventDefault();
+                alert("Ты кака!");
+                alert("Сам такой!");
+            });
+        </script>
+    </div>
+</body>
+</html>
