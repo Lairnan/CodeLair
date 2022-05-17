@@ -8,7 +8,6 @@ submit.addEventListener("click",(e)=>{
 const leftBar = document.querySelectorAll('.profile__left__bar>*');
 leftBar.forEach((btn,i)=>btn.addEventListener("click",(e)=>{
     e.preventDefault();
-    let url = new URLSearchParams(document.location.search);
     switch(btn.attributes.href.textContent){
         case('?set=prof'):
             window.history.pushState("New location","Change location",document.location.pathname + "?set=prof");
@@ -26,8 +25,6 @@ leftBar.forEach((btn,i)=>btn.addEventListener("click",(e)=>{
 
 document.addEventListener("DOMContentLoaded",()=>{
     let url = new URLSearchParams(document.location.search);
-    console.log(url);
-    console.log(url.get('set'));
     switch(url.get('set')){
         case('prof'):
             prof();
