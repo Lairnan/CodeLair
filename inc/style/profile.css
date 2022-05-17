@@ -98,11 +98,12 @@ body,html{
     margin-right:0.25em;
     padding:0.25em;
 }
-.profile__left__bar>p{
+.profile__left__bar>*{
+    display:block;
     margin-bottom:0.25em;
     cursor:pointer;
 }
-.profile__left__bar>p:hover{
+.profile__left__bar>*:hover{
     color:#7ad284;
 }
 .profile__block{

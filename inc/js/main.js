@@ -43,7 +43,8 @@ blockBtn.forEach((btn,i)=>btn.addEventListener('click', () => {
 
 subCode.addEventListener('click', (e) => {
 	e.preventDefault();
-	codeBlock.value = "Проверяй сам себя!";
+	alert("Компиляторы не подключены");
+	// codeBlock.value = "Now working now!";
 	// let quest = questLang("PHP");
 	// console.log(codeBlock.value);
 	// console.log(quest[1]);

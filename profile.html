@@ -26,9 +26,8 @@
                     <h2 class="profile__name">Настройки</h2>
                     <div class="profile">
                         <div class="profile__left__bar">
-                            <p>Какой-то пункт</p>
-                            <p>Какой-то пункт</p>
-                            <p>Какой-то пункт</p>
+                            <a href="?set=prof">Профиль</a>
+                            <a href="?set=acc">Аккаунт</a>
                         </div>
                         <div class="profile__right__bar">
                             <form method="POST">
@@ -37,8 +36,16 @@
                                     <label for="login">Логин</label>
                                 </div>
                                 <div class="profile__block">
+                                    <input type="text" id="name" name="name" required="">
+                                    <label for="name">Имя</label>
+                                </div>
+                                <div class="profile__block">
+                                    <input type="text" id="surname" name="surname" required="">
+                                    <label for="surname">Фамилия</label>
+                                </div>
+                                <div class="profile__block">
                                     <input type="mail" id="email" name="email" required="">
-                                    <label for="email">Email</label>
+                                    <label for="email">Почта</label>
                                 </div>
                                 <div class="profile__block">
                                     <input type="submit" id="submit" name="submit" value="Сохранить"/>
@@ -50,14 +57,7 @@
             </div>
         </div>
         <div class="footer"></div>
-        <script>
-            const submit = document.querySelector('input[type="submit"]');
-            submit.addEventListener("click",(e)=>{
-                e.preventDefault();
-                alert("Ты кака!");
-                alert("Сам такой!");
-            });
-        </script>
+        <script src="inc/js/profile.js"></script>
     </div>
 </body>
 </html>
